@@ -1,13 +1,13 @@
 package com.dtosoftassertionsexample.model;
 
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.util.List;
 @Getter
 @Setter
 @ToString
+@EqualsAndHashCode
+@AllArgsConstructor
 public class ExchangeRates {
     public String date;
     public String bank;

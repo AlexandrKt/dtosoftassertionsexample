@@ -10,9 +10,9 @@ import static io.restassured.RestAssured.given;
 
 public class ApiUtil {
     static RequestSpecification requestSpec = getRequestSpec();
-    public static Response sendGetRequest(String endpoint) {
+    public static Response sendGetRequest(String endpoint, String date) {
 
-        return requestSpec.given().when().get(endpoint);
+        return requestSpec.given().queryParam("json").queryParam("date",date).when().get(endpoint);
     }
     public static Response sendPostRequest(String endpoint, Map<String, Object> reqBody) {
         return requestSpec
